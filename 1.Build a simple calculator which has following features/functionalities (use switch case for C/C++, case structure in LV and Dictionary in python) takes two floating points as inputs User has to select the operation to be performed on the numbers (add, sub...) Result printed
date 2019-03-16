@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<math.h>
+int main() {
+
+    char op;
+    double f,s;
+
+    printf("Enter an operator (+, -, *,/): ");
+    scanf("%c", &op);
+
+    printf("Enter two operands: ");
+    scanf("%lf %lf",&f, &s);
+
+    switch(op)
+    {
+        case '+':
+            printf("%.2lf + %.2lf = %.2lf",f, s, (f+s));
+            break;
+
+        case '-':
+            printf("%.2lf - %.2lf = %.2lf",f, s, (f-s));
+            break;
+
+        case '*':
+            printf("%.2lf * %.2lf = %.2lf",f, s, (f*s));
+            break;
+
+        case '/':
+        if(s!=0)
+            printf("%.1lf / %.1lf = %.1lf",f, s, (f/s));
+            else
+            printf("ERROR enter a valid divisor");
+            break;
+            
+        default:
+            printf("Invalid");
+    }
+    
+    return 0;
+}
